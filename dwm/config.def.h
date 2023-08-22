@@ -8,7 +8,7 @@ static const unsigned int colorfultitle = 1;  /* 0 means title use SchemeTitle a
 static const unsigned int colorfultag   = 1;  /* 0 means use SchemeSel for selected tag */
 static const unsigned int snap      	= 32; /* snap pixel */
 static const unsigned int gappih    	= 8;  /* horiz inner gap between windows */
-static const unsigned int gappiv   		= 8;  /* vert inner gap between windows */
+static const unsigned int gappiv   	= 8;  /* vert inner gap between windows */
 static const unsigned int gappoh    	= 10; /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov    	= 10; /* vert outer gap between windows and screen edge */
 static const unsigned int stairpx   	= 60; /* depth of the stairs layout */
@@ -21,8 +21,8 @@ static const int scalepreview       	= 4;  /* preview scaling (display w and h /
 static const int previewbar         	= 1;  /* show the bar in the preview window */
 static const int horizpadbar        	= 5;  /* horizontal padding for statusbar */
 static const int vertpadbar         	= 10;  /* vertical padding for statusbar */
-static const int vertpad            = 5;       /* vertical padding of bar */
-static const int sidepad            = 5;       /* horizontal padding of bar */
+static const int vertpad            	= 5;       /* vertical padding of bar */
+static const int sidepad            	= 5;       /* horizontal padding of bar */
 static const char *fonts[]          	= { "JetBrainsMono Nerd Font:size=10", "fontello:size=30", "icomoon:size=11", "NotoColorEmoji:pixelsize=15:antialias=true:autohint=true"};
 static const char dmenufont[]       	= "JetBrainsMono Nerd Font:size=10";
 /*static const char col_gray1[]       	= "#1b2b34";*/
@@ -33,38 +33,38 @@ static const char col_gray4[]       	= "#eeeeee";
 /*static const char col_cyan[]        	= "#005577";*/
 static const char col_cyan[]        	= "#3b5469";
 static const char col_white[]        	= "#d8dee9";
-static const char col_green[]					= "#99c794";
-static const char col_yellow[]				= "#e6c547";
-static const char col_red[]						= "#ec5f67";
-static const char col_blue[]					= "#6699cc";
-static const char col_gray[]					= "#3a5165";
+static const char col_green[]		= "#99c794";
+static const char col_yellow[]		= "#e6c547";
+static const char col_red[]		= "#ec5f67";
+static const char col_blue[]		= "#6699cc";
+static const char col_gray[]		= "#3a5165";
 static const char *colors[][3]      	= {
 	/*               fg         bg         border   */
-	[SchemeNorm] 	   	 = { col_white, 			col_gray1, 		col_cyan },
-	[SchemeSel]  	     = { col_white, 			col_gray1,  	col_cyan },
+	[SchemeNorm] 	   = { col_white, 	col_gray1, 	col_cyan },
+	[SchemeSel]  	   = { col_white, 	col_gray1,  	col_cyan },
 
-	[SchemeTag]        = { col_gray,    		col_gray1,  	col_cyan },
-  [SchemeTag1]       = { col_yellow,   		col_gray1,  	col_cyan },
+	[SchemeTag]        = { col_gray,    	col_gray1,  	col_cyan },
+  	[SchemeTag1]       = { col_yellow,   	col_gray1,  	col_cyan },
 	[SchemeTag2]       = { col_red,       	col_gray1,  	col_cyan },
-  [SchemeTag3]       = { col_green,   		col_gray1,  	col_cyan },
-  [SchemeTag4]       = { col_yellow,    	col_gray1,  	col_cyan },
-  [SchemeTag5]       = { col_red,  				col_gray1,  	col_cyan },
+ 	[SchemeTag3]       = { col_green,   	col_gray1,  	col_cyan },
+  	[SchemeTag4]       = { col_yellow,    	col_gray1,  	col_cyan },
+  	[SchemeTag5]       = { col_red,  	col_gray1,  	col_cyan },
 	[SchemeTag6]       = { col_green,     	col_gray1,  	col_cyan },
 	[SchemeLayout]     = { col_gray4,       col_gray1,  	col_cyan },
 
-	[SchemeTitle]      = { col_gray3,       col_gray1, 		col_cyan },
-	[SchemeTitleFloat] = { col_blue,     		col_gray1,    col_cyan },
+	[SchemeTitle]      = { col_gray3,       col_gray1, 	col_cyan },
+	[SchemeTitleFloat] = { col_blue,     	col_gray1,    col_cyan },
 	[SchemeTitle1]     = { col_yellow,      col_gray1,    col_cyan },
 	[SchemeTitle2]     = { col_red,         col_gray1,    col_cyan },
-  [SchemeTitle3]     = { col_green,   		col_gray1,    col_cyan },
-  [SchemeTitle4]     = { col_yellow,     	col_gray1,    col_cyan },
-  [SchemeTitle5]     = { col_red,  				col_gray1,    col_cyan },
+  	[SchemeTitle3]     = { col_green,   	col_gray1,    col_cyan },
+  	[SchemeTitle4]     = { col_yellow,     	col_gray1,    col_cyan },
+  	[SchemeTitle5]     = { col_red,  	col_gray1,    col_cyan },
 	[SchemeTitle6]     = { col_green,     	col_gray1,    col_cyan },
 
 };
 
 /* tagging */
-static const char *tags[] 		= { "", "○","●","○","●","󰊠" };
+static const char *tags[] 	= { "", "●","●","●","●","󰊠" };
 static const char *alttags[] 	= { "", "●","●","●","●","󰊠" };
 
 static const int tagschemes[] 	= { SchemeTag1, SchemeTag2, SchemeTag3,
@@ -151,14 +151,14 @@ static const Key keys[] = {
 
 	/* modifier                     key        function        argument */
 	{ MODKEY,                       XK_n,      		spawn,          {.v = filemngr } },
-  { MODKEY,                       XK_w,      		spawn,          {.v = web } },
+  	{ MODKEY,                       XK_w,      		spawn,          {.v = web } },
 	{ MODKEY,                       XK_Print,  		spawn,          {.v = flamecmd } },
-  { MODKEY|ShiftMask,             XK_grave,  		spawn,          {.v = dmenubt } },	
+  	{ MODKEY|ShiftMask,             XK_grave,  		spawn,          {.v = dmenubt } },	
 	{ MODKEY,                       XK_grave,  		spawn,          {.v = dmenupwr } },
 	{ MODKEY,                       XK_p,      		spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_p,      		spawn,          {.v = dmenunm } },
-	{ MODKEY,		                		XK_Return, 		spawn,          {.v = termcmd } },
-	{ MODKEY|ShiftMask,		        	XK_Return, 		spawn,          {.v = term2cmd } },
+	{ MODKEY,		       	XK_Return, 		spawn,          {.v = termcmd } },
+	{ MODKEY|ShiftMask,		XK_Return, 		spawn,          {.v = term2cmd } },
 
 /*===================================================================================================*/	
 
@@ -207,7 +207,7 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_t,      		setlayout,      {.v = &layouts[0]} },
 	{ MODKEY,                       XK_f,      		setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_m,      		setlayout,      {.v = &layouts[2]} },
-	{ MODKEY|ControlMask,						XK_comma,  		cyclelayout,    {.i = -1 } },
+	{ MODKEY|ControlMask,	 	XK_comma,  		cyclelayout,    {.i = -1 } },
 	{ MODKEY|ControlMask,           XK_period, 		cyclelayout,    {.i = +1 } },
 	{ MODKEY,                       XK_space,  		setlayout,      {0} },
 	{ MODKEY|ShiftMask,             XK_space,  		togglefloating, {0} },
@@ -235,7 +235,7 @@ static const Key keys[] = {
 
 /*===================================================================================================*/
 
-  { 0, XF86XK_AudioMute,		    	spawn,		SHCMD("~/.local/bin/scripts/notify/change-volume mute") },
+  { 0, XF86XK_AudioMute,		spawn,		SHCMD("~/.local/bin/scripts/notify/change-volume mute") },
   { 0, XF86XK_AudioRaiseVolume,		spawn,		SHCMD("~/.local/bin/scripts/notify/change-volume up") },
   { 0, XF86XK_AudioLowerVolume,		spawn,		SHCMD("~/.local/bin/scripts/notify/change-volume down") },
   { 0, XF86XK_MonBrightnessUp,		spawn,		SHCMD("~/.local/bin/scripts/notify/change-brightness up") },
