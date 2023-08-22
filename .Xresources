@@ -1,0 +1,127 @@
+!------------------------------------------------------------------------------
+! URXVT PREFERENCES
+!------------------------------------------------------------------------------
+URxvt.font:                       xft:JetBrainsMonoMedium nerd font mono:size=11
+!URxvt.font:						  xft:Ubuntu:style=Regular:size=10
+URxvt.geometry:                   9x15
+URxvt.cursorBlink:                true
+URxvt.cursorUnderline:            true
+URxvt.saveline:                   32768
+URxvt.scrollBar:                  false
+URxvt.scrollBar_right:            true
+URxvt.scrollBar_floating:         false
+URxvt.scrollstyle:                plain
+URxvt.urgentOnBell:               false
+URxvt.depth:                      32
+URxvt.iso14755:                   false
+URxvt.letterSpace: -1
+URxvt.lineSpace:    0
+
+! URXVT EXTENSIONS
+URxvt.perl-ext-common:            default,clipboard,keyboard-select,resize-font,url-select,tabbedex
+
+URxvt.tabbedex.no-tabbedex-keys:  yes
+URxvt.tabbedex.new-button:        false
+URXvt.tabbedex.reopen-on-close:   yes
+URxvt.tabbedex.autohide:          yes
+
+URxvt.tabbedex.tabbar-fg:         4
+URxvt.tabbedex.tabbar-bg:         0
+URxvt.tabbedex.tab-fg:            7
+URxvt.tabbedex.tab-bg:            0
+URxvt.tabbedex.bell-fg:           0
+URxvt.tabbedex.bell-bg:           0
+URxvt.tabbedex.bell-tab-fg:       0
+URxvt.tabbedex.bell-tab-bg:       0
+URxvt.tabbedex.title-fg:          7
+URxvt.tabbedex.title-bg:          0
+
+URxvt.keysym.Control-Shift-T:     perl:tabbedex:new_tab
+URxvt.keysym.Control-Shift-R:     perl:tabbedex:rename_tab
+URxvt.keysym.Control-Shift-W:     perl:tabbedex:kill_tab
+URxvt.keysym.Control-Next:        perl:tabbedex:next_tab
+URxvt.keysym.Control-Prior:       perl:tabbedex:prev_tab
+URxvt.keysym.Control-Shift-Next:  perl:tabbedex:move_tab_right
+URxvt.keysym.Control-Shift-Prior: perl:tabbedex:move_tab_left
+
+URxvt.clipboard.copycmd:          xclip -i -selection clipboard
+URxvt.clipboard.pastecmd:         xclip -o -selection clipboard
+URxvt.keysym.C-c:                 perl:clipboard:copy
+URxvt.keysym.C-v:                 perl:clipboard:paste
+URxvt.keysym.C-Escape:            perl:keyboard-select:activate
+URxvt.keysym.A-s:                 perl:keyboard-select:search
+
+URxvt.keysym.C-+:     font-size:increase
+URxvt.keysym.C--:   font-size:decrease
+URxvt.keysym.C-=:  font-size:reset
+URxvt.keysym.C-?:  font-size:show
+
+URxvt.urlLauncher:                firefox
+URxvt.underlineURLs:              true
+URxvt.urlButton:                  1
+
+! special
+*.foreground:   #c5c8c6
+*.background:   #1d1f21
+*.cursorColor:  #c5c8c6
+
+! black
+*.color0:       #1d1f21
+*.color8:       #969896
+
+! red
+*.color1:       #cc6666
+*.color9:       #cc6666
+
+! green
+*.color2:       #b5bd68
+*.color10:      #b5bd68
+
+! yellow
+*.color3:       #f0c674
+*.color11:      #f0c674
+
+! blue
+*.color4:       #81a2be
+*.color12:      #81a2be
+
+! magenta
+*.color5:       #b294bb
+*.color13:      #b294bb
+
+! cyan
+*.color6:       #8abeb7
+*.color14:      #8abeb7
+
+! white
+*.color7:       #c5c8c6
+*.color15:      #ffffff
+
+
+!------------------------------------------------------------------------------
+! XTERM PREFERENCES
+!------------------------------------------------------------------------------
+XTerm*termName:               xterm-256color
+XTerm*vt100.locale:           true
+XTerm.vt100.utf8:             true
+XTerm*vt100.metaSendsEscape:  true
+XTerm*vt100.backarrowKey:     false
+XTerm*ttyModes:               erase ^?
+XTerm*vt100.saveLines:        4096
+XTerm*vt100.geometry:         100x32
+XTerm*vt100.faceName:         JetBrainsMono nerd font mono:antialias=true
+XTerm.vt100.faceSize:         10
+X!Term*vt100.boldFont:        JetBrainsMonoMedium nerd font mono:size=10
+XTerm*vt100.allowTitleOps:    true
+XTerm*border:                 off
+xTerm*borderWidth:            0
+XTerm*Thickness:              0
+xTerm*loginShell:             true
+XTerm*multiScroll:            on
+XTerm*background:			  #1d1f21
+!XTerm*background:            #002B36
+XTerm*selectToClipboard:      true
+!------------------------------------------------------------------------------
+xterm*VT100.Translations: #override \n\
+                 Ctrl Shift <Key>V:    insert-selection(CLIPBOARD) \n\
+                 Ctrl Shift <Key>C:    copy-selection(CLIPBOARD)                
