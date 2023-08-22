@@ -1,0 +1,10 @@
+#!/usr/bin/env bash
+
+# load colors
+. ~/.local/bin/dwmstatus_module/theme/tokyonight
+
+# For dwmstatus
+while true; do
+    xsetroot -name " $(~/.local/bin/dwmstatus_module/wlan.sh)  $(~/.local/bin/dwmstatus_module/cpu-temp.sh)  $(~/.local/bin/dwmstatus_module/volume.sh) $(~/.local/bin/dwmstatus_module/backlight.sh) [$(date +" %d/%m %H:%M")] $(~/.local/bin/dwmstatus_module/bat-state.sh) $(~/.local/bin/dwmstatus_module/bat-capacity.sh) |  мαякω "
+    sleep 1
+done
