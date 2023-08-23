@@ -73,8 +73,8 @@ static const int titleschemes[] = { SchemeTitle1, SchemeTitle2, SchemeTitle3,
                                     SchemeTitle4, SchemeTitle5, SchemeTitle6 };
 
 
-static const unsigned int ulinepad			= 5;	/* horizontal padding between the underline and tag */
-static const unsigned int ulinestroke		= 2;	/* thickness / height of the underline */
+static const unsigned int ulinepad	= 5;	/* horizontal padding between the underline and tag */
+static const unsigned int ulinestroke	= 2;	/* thickness / height of the underline */
 static const unsigned int ulinevoffset	= 0;	/* how far above the bottom of the bar the line should appear */
 static const int ulineall 							= 0;	/* 1 to show underline on all tags, 0 for just the active ones */
 
@@ -132,7 +132,7 @@ static const Layout layouts[] = {
 #define STATUSBAR "dwmblocks"
 /* commands */
 static 	     char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *approot[] =	{ "appasroot.sh", NULL};
+static const char *approot[]  =	{ "appasroot.sh", NULL};
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dmenupwr[] = { "dmenu_power", NULL };
 static const char *dmenubt[]  = { "dmenu_bluetooth", NULL };
