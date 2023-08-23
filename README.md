@@ -3,14 +3,21 @@
 <img src="https://github.com/yuraa-id/dwm/blob/main/screenshot/Screenshot_2023-08-22_14-16-53.png">
 
 # Requirements
+- ifstat
 - imlib2 
-- xsetroot package (status2d uses this to add colors on dwmbar)
 - picom
 - dunst
-- nitrogen
-- oh-my-zsh
-- zsh
-- xterm (this terminal used in the default config in dwm)
+- zsh (oh-my-zsh)
+- xsetroot package (status2d uses this to add colors on dwmbar)
+
+# Apps used
+- scrot / flameshot : take screenshots
+- firefox           : web browser
+- thunar            : file manager
+- xterm / st        : terminal
+- rofi / dmenu      : launcher apps menu
+- nvchad            : text editor
+  (see config.def.h to conform keybindings of the apps)
 
 # icon & theme
 - cursor = ComixCursor
@@ -19,7 +26,7 @@
 
 # Font
 - JetbrainsMono Nerd Font
-- include in font folder
+- included in font folder
 
 # Install 
   edit .zshrc
@@ -27,8 +34,7 @@
 export PATH=$HOME/.local/bin/scripts:$PATH
 export PATH=$HOME/.local/bin:$PATH
 ```
- edit config.def.h to change keybindings and menu launcher (default is dmenu)
- 
+ make install dwm
 ```
 cd dwm
 sudo make install
@@ -37,6 +43,7 @@ sudo make install
 ```
 bar.sh
 ```
+
 # Patch
 - alt tag decoration
 - attach top
@@ -58,5 +65,6 @@ bar.sh
 - underlinetag
 
 # Credit
-- for Color theme [chadwm](https://github.com/siduck/chadwm)
+- inspired by [chadwm](https://github.com/siduck/chadwm) for Color themes
 - for script statusbar [bandithijo](https://bandithijo.dev/)
+- for rofi themes [adi1090x](https://github.com/adi1090x/rofi/tree/master)
