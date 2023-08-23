@@ -30,17 +30,18 @@
 - included in font folder
 
 # Install 
-  edit .zshrc
+- In zsh (oh-my-zsh)
 ```
+# edit .zshrc and add this line
 export PATH=$HOME/.local/bin/scripts:$PATH
 export PATH=$HOME/.local/bin:$PATH
 ```
- make install dwm
+- make install
 ```
 cd dwm
 sudo make install
 ```
-  launch statusbar
+- launch statusbar
 ```
 bar.sh
 ```
