@@ -21,8 +21,8 @@
 
 # icon & theme
 - cursor = ComixCursor
-- icon = TokyoNight-SE
-- theme = Monochrome-GTK , Tokyonight-Dark-B
+- icon   = TokyoNight-SE
+- themes = Monochrome-GTK , Tokyonight-Dark-B
 
 # Font
 - JetbrainsMono Nerd Font
