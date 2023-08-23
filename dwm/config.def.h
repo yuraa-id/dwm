@@ -130,18 +130,19 @@ static const Layout layouts[] = {
 #define SHCMD(cmd) { .v = (const char*[]){ "/bin/sh", "-c", cmd, NULL } }
 
 #define STATUSBAR "dwmblocks"
-
 /* commands */
-static 		 char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+static 	     char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
+static const char *approot[] =	{ "appasroot.sh", NULL};
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *termcmd[]  = { "xterm", NULL };
-static const char *term2cmd[] = { "st", NULL };
-static const char *flamecmd[] = { "flameshot-imgck" , NULL};
-static const char *web[]  	  = { "firefox", NULL };
-static const char *filemngr[] = { "thunar", NULL };
 static const char *dmenupwr[] = { "dmenu_power", NULL };
 static const char *dmenubt[]  = { "dmenu_bluetooth", NULL };
-static const char *dmenunm[]  = { "networkmanager_dmenu", NULL };
+static const char *flamecmd[] = { "flameshot-imgck" , NULL};
+static const char *filemngr[] = { "thunar", NULL };
+static const char *launcher[] = { "launcher.sh", NULL};
+static const char *scrot[]    = { "screenshot.sh", NULL};
+static const char *termcmd[]  = { "xterm", NULL };
+static const char *term2cmd[] = { "st", NULL };
+static const char *web[]      = { "firefox", NULL };
 
 #include <X11/XF86keysym.h>
 #include "movestack.c"
@@ -150,15 +151,16 @@ static const Key keys[] = {
 /*===================================================================================================*/	
 
 	/* modifier                     key        function        argument */
-	{ MODKEY,                       XK_n,      		spawn,          {.v = filemngr } },
-  	{ MODKEY,                       XK_w,      		spawn,          {.v = web } },
-	{ MODKEY,                       XK_Print,  		spawn,          {.v = flamecmd } },
-  	{ MODKEY|ShiftMask,             XK_grave,  		spawn,          {.v = dmenubt } },	
-	{ MODKEY,                       XK_grave,  		spawn,          {.v = dmenupwr } },
-	{ MODKEY,                       XK_p,      		spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_p,      		spawn,          {.v = dmenunm } },
-	{ MODKEY,		       	XK_Return, 		spawn,          {.v = termcmd } },
+	{ MODKEY,                       XK_p,      		spawn,          {.v = launcher } },
+ 	{ MODKEY|ShiftMask,             XK_p,      		spawn,          {.v = approot } },
+	{ MODKEY,		        XK_Return, 		spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,		XK_Return, 		spawn,          {.v = term2cmd } },
+ 	{ MODKEY,                       XK_grave,  		spawn,          {.v = dmenupwr } },
+ 	{ MODKEY|ShiftMask,             XK_grave,  		spawn,          {.v = dmenubt } },
+	{ MODKEY,                       XK_n,      		spawn,          {.v = filemngr } },
+	{ MODKEY,                       XK_Print,  		spawn,          {.v = flamecmd } },
+	{ 0,			        XK_Print,  		spawn,          {.v = scrot } },
+  	{ MODKEY,                       XK_w,      		spawn,          {.v = web } },
 
 /*===================================================================================================*/	
 
