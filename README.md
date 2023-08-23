@@ -17,7 +17,8 @@
 - xterm / st        : terminal
 - rofi / dmenu      : launcher apps menu
 - nvchad            : text editor
-  (see config.def.h to conform keybindings of the apps)
+
+(see config.def.h to conform keybindings of the apps)
 
 # icon & theme
 - cursor = ComixCursor
