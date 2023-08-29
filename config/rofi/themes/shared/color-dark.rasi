@@ -1,0 +1,12 @@
+* {
+  bg: #1e2127ff;
+  bg-semilight: #282b31ff;
+  bg-light: #282B31;
+  fg: #d8dee9;
+  red: #ec5f67;
+  blue: #61AFEFFF;
+  green: #99c794;
+  bg-hover: #6699cc;
+  fg-hover: #1d1f21;
+  fg-unhover: #6699cc;
+}
