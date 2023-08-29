@@ -3,7 +3,6 @@
 <img src="https://github.com/yuraa-id/dwm/blob/main/screenshot/2023-08-29-145953_1366x768_scrot.png">
 
 # Requirements
-- xsecurelock
 - ifstat
 - imlib2 
 - picom
@@ -18,6 +17,7 @@
 - xterm / st        : terminal
 - rofi / dmenu      : launcher apps menu
 - nvchad / sublime  : text editor
+- xsecurelock       : lockscreen
 
 (see config.def.h to conform keybindings of the apps)
 
@@ -28,7 +28,7 @@
 
 # Font
 - JetbrainsMono Nerd Font
-- included in font folder
+- included in font folder (DWM logo)
 
 # Install 
 - In zsh (oh-my-zsh)
