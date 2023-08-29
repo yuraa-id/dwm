@@ -1,0 +1,20 @@
+#!/bin/dash
+
+# colors
+
+#1b2b34
+#1d1f21
+black=#292d3e
+green=#99c794
+green_alt=#b5db68
+dwm=#3b5469
+dwm_alt=#597e9d
+white=#d8dee9
+grey=#81a2be
+grey_alt=#bbc2cf
+grey_dwm=#3a5165
+blue=#6699cc
+blue_alt=#83a598
+red=#ec5f67
+yellow=#fac863
+yellow_alt=#e6c547
