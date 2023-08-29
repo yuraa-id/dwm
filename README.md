@@ -55,7 +55,7 @@ bar.sh &
 - bar padding
 - center
 - cfact vanitygaps combo
-- [colorful tag](https://github.com/fitrh/dwm/issues/1))
+- [colorful tag](https://github.com/fitrh/dwm/issues/1)
 - cycle layouts
 - launchers
 - movecenter
