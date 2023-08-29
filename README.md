@@ -1,8 +1,9 @@
 # Screenshoot
-<img src="https://github.com/yuraa-id/dwm/blob/main/screenshot/Screenshot_2023-08-22_14-33-17.png">
-<img src="https://github.com/yuraa-id/dwm/blob/main/screenshot/Screenshot_2023-08-22_14-16-53.png">
+<img src="https://github.com/yuraa-id/dwm/blob/main/screenshot/2023-08-29-145512_1366x768_scrot.png">
+<img src="https://github.com/yuraa-id/dwm/blob/main/screenshot/2023-08-29-145953_1366x768_scrot.png">
 
 # Requirements
+- xsecurelock
 - ifstat
 - imlib2 
 - picom
@@ -12,11 +13,11 @@
 
 # Apps used
 - scrot / flameshot : take screenshots
-- firefox           : web browser
+- chromium          : web browser
 - thunar            : file manager
 - xterm / st        : terminal
 - rofi / dmenu      : launcher apps menu
-- nvchad            : text editor
+- nvchad / sublime  : text editor
 
 (see config.def.h to conform keybindings of the apps)
 
@@ -43,30 +44,39 @@ sudo make install
 ```
 - launch statusbar
 ```
-bar.sh
+# add to .xinitrc / .profile (if use display manager)
+bar.sh &
 ```
 
 # Patch
+- actualfullscreen
 - alt tag decoration
 - attach top
 - bar padding
 - center
-- cfact vanitygaps
-- colorful tag by [chadwm](https://github.com/siduck/chadwm)
+- cfact vanitygaps combo
+- [colorful tag](https://github.com/fitrh/dwm/issues/1))
 - cycle layouts
+- launchers
+- movecenter
 - movestack
+- movethrow
+- noborder
+- notitle
 - pertag
+- resizecorner
 - restartsig
 - restore after restart
+- scratchpad
 - stairs fullgaps
 - status2d
+- statusbutton
 - statuscmd-status2d
 - status padding
-- tag preview
 - tatami
 - underlinetag
 
 # Credit
-- inspired by [chadwm](https://github.com/siduck/chadwm) for Color themes
+- inspired by [chadwm](https://github.com/siduck/chadwm) for themes
 - for script statusbar [bandithijo](https://bandithijo.dev/)
 - for rofi themes [adi1090x](https://github.com/adi1090x/rofi/tree/master)
